@@ -1,4 +1,5 @@
 # SwitchTweetdeckAccount
+[![Version](https://img.shields.io/badge/Version-1.0-blue.svg?style=for-the-badge)](https://chrome.google.com/webstore/detail/jhclgjipjcengbapikaenmopdinlnpin/)
 [![MIT License](https://img.shields.io/github/license/mkobayashime/SwitchTweetdeckAccount.svg?style=for-the-badge)](https://github.com/mkobayashime/SwitchTweetdeckAccount/blob/master/LICENSE)
 
 Chrome Extension for switching Twitter account used for tweet on Tweetdeck by shortcut keys.
@@ -17,8 +18,9 @@ npm install --global yo gulp-cli bower
 # Install the generator:
 npm install -g generator-chrome-extension
 
-# Make a new directory, and `cd` get into it:
-mkdir my-new-chrome-extension && cd $_
+# Clone this repository
+git clone https://github.com/mkobayashime/SwitchTweetdeckAccount.git
+cd SwitchTweetdeckAccount
 
 # Generate a new project
 yo chrome-extension
@@ -41,7 +43,7 @@ Need more information about Chrome Extension? Please visit [Google Chrome Extens
 
 ## Further Tips
 
-Go to [generator-chrome-extension] for further documentation.
+Visit [generator-chrome-extension] for further documentation.
 
 ## Contribution
 Any kind of contribution would be appreciated!
