@@ -36,10 +36,20 @@ const setShortcuts = (showBtn, application) => {
       buttons[e].click()
     }
   }
+
+  const isTyping = () => {
+    const tagName = document.activeElement.tagName
+
+    // HTML tags to be detected as typing
+    const inputTags = ["INPUT", "TEXTAREA", "SELECT"]
+
+    if(inputTags.indexOf(tagName) !== -1) {
+      return true
     }
   }
 
   document.onkeyup = e => {
+    if (!isTyping()) {
     switch(e.shiftKey && e.which) {
       case 49:
         clickAccount(0)
