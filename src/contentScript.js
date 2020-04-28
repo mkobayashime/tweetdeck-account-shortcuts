@@ -28,18 +28,14 @@ const setShortcuts = (showBtn, application) => {
     return application.classList.contains('hide-detail-view-inline')
   }
   
-  const loadDom = () => {
-    return document.getElementsByClassName('js-account-item')
-  }
-  
   const clickAccount = (e) => {
     if (!isOpen()) {
       showBtn.click()
-      el = loadDom()
-      el[e].click()
+      buttons[e].click()
     } else {
-      el = loadDom()
-      el[e].click()
+      buttons[e].click()
+    }
+  }
     }
   }
 
