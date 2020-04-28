@@ -1,14 +1,28 @@
 "use strict"
 
 window.onload = () => {
-  let showBtn, application, el
+  getVideo()
+}
+
+const getVideo = () => {
+  const promise = new Promise((resolve) => {
   const interval = window.setInterval(() => {
-    showBtn = document.querySelector('.js-show-drawer')
-    application = document.querySelector('.application')
-    if(showBtn && application) {
+      const showBtn = document.getElementsByClassName('js-show-drawer')[0]
+      const application = document.getElementsByClassName('application')[0]
+      if (showBtn && application) {
       window.clearInterval(interval)
+        resolve({ showBtn, application })
     }
-  }, 1000)
+    }, 250)
+  })
+  
+  promise.then((dom) => {
+    setShortcuts(dom.showBtn, dom.application)
+  })
+}
+
+const setShortcuts = (showBtn, application) => {
+  const buttons = document.getElementsByClassName('js-account-item')
 
   const isOpen = () => {
     return application.classList.contains('hide-detail-view-inline')
@@ -63,4 +77,5 @@ window.onload = () => {
         break
     }
   }
+}
 }
