@@ -1,5 +1,5 @@
 # Switch Tweetdeck Account
-[![Version](https://img.shields.io/badge/Version-1.1-blue.svg?style=for-the-badge)](https://chrome.google.com/webstore/detail/jhclgjipjcengbapikaenmopdinlnpin/)
+[![Version](https://img.shields.io/badge/Version-1.1-blue.svg?style=for-the-badge)](https://chrome.google.com/webstore/detail/switch-tweetdeck-account/jhclgjipjcengbapikaenmopdinlnpin)
 [![MIT License](https://img.shields.io/github/license/mkobayashime/switch-tweetdeck-account.svg?style=for-the-badge)](https://github.com/mkobayashime/switch-tweetdeck-account/blob/master/LICENSE)
 
 Chrome Extension for switching Twitter account used for tweet on Tweetdeck by shortcut keys.
