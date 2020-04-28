@@ -1,11 +1,10 @@
-node_modules
-temp
-.tmp
-dist
-.sass-cache
-app/bower_components
-test/bower_components
-package
-app/scripts
-package-lock.json
-illustrator
+# dependencies
+/node_modules
+
+# production
+/build
+
+# misc
+.DS_Store
+
+npm-debug.log*

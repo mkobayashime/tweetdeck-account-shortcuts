@@ -1,3 +1,5 @@
+"use strict"
+
 window.onload = () => {
   let showBtn, application, el
   const interval = window.setInterval(() => {
