@@ -1,18 +1,21 @@
 "use strict"
 
-window.onload = () => {
-  getVideo()
-}
+// eslint-disable-next-line no-undef
+chrome.runtime.onMessage.addListener((message) => {
+  if (message.type === "updated") {
+    getVideo()
+  }
+})
 
 const getVideo = () => {
   const promise = new Promise((resolve) => {
-  const interval = window.setInterval(() => {
+    const interval = window.setInterval(() => {
       const showBtn = document.getElementsByClassName('js-show-drawer')[0]
       const application = document.getElementsByClassName('application')[0]
       if (showBtn && application) {
-      window.clearInterval(interval)
+        window.clearInterval(interval)
         resolve({ showBtn, application })
-    }
+      }
     }, 250)
   })
   
@@ -50,38 +53,38 @@ const setShortcuts = (showBtn, application) => {
 
   document.onkeyup = e => {
     if (!isTyping()) {
-    switch(e.shiftKey && e.which) {
-      case 49:
-        clickAccount(0)
-        break
-      case 50:
-        clickAccount(1)
-        break
-      case 51:
-        clickAccount(2)
-        break
-      case 52:
-        clickAccount(3)
-        break
-      case 53:
-        clickAccount(4)
-        break
-      case 54:
-        clickAccount(5)
-        break
-      case 55:
-        clickAccount(6)
-        break
-      case 56:
-        clickAccount(7)
-        break
-      case 57:
-        clickAccount(8)
-        break
-      case 48:
-        clickAccount(9)
-        break
+      switch(e.shiftKey && e.which) {
+        case 49:
+          clickAccount(0)
+          break
+        case 50:
+          clickAccount(1)
+          break
+        case 51:
+          clickAccount(2)
+          break
+        case 52:
+          clickAccount(3)
+          break
+        case 53:
+          clickAccount(4)
+          break
+        case 54:
+          clickAccount(5)
+          break
+        case 55:
+          clickAccount(6)
+          break
+        case 56:
+          clickAccount(7)
+          break
+        case 57:
+          clickAccount(8)
+          break
+        case 48:
+          clickAccount(9)
+          break
+      }
     }
   }
-}
 }
