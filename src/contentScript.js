@@ -1,13 +1,12 @@
 "use strict"
 
-// eslint-disable-next-line no-undef
 chrome.runtime.onMessage.addListener((message) => {
   if (message.type === "updated") {
-    getVideo()
+    getDom()
   }
 })
 
-const getVideo = () => {
+const getDom = () => {
   const promise = new Promise((resolve) => {
     const interval = window.setInterval(() => {
       const showBtn = document.getElementsByClassName('js-show-drawer')[0]
