@@ -1,10 +1,8 @@
 "use strict"
 
-chrome.runtime.onMessage.addListener((message) => {
-  if (message.type === "updated") {
-    getDom()
-  }
-})
+window.onload = () => {
+  getDom()
+}
 
 const getDom = () => {
   const promise = new Promise((resolve) => {
@@ -17,7 +15,7 @@ const getDom = () => {
       }
     }, 250)
   })
-  
+
   promise.then((dom) => {
     setShortcuts(dom.showBtn, dom.application)
   })
@@ -29,7 +27,7 @@ const setShortcuts = (showBtn, application) => {
   const isOpen = () => {
     return application.classList.contains('hide-detail-view-inline')
   }
-  
+
   const clickAccount = (e) => {
     if (!isOpen()) {
       showBtn.click()
@@ -45,14 +43,14 @@ const setShortcuts = (showBtn, application) => {
     // HTML tags to be detected as typing
     const inputTags = ["INPUT", "TEXTAREA", "SELECT"]
 
-    if(inputTags.indexOf(tagName) !== -1) {
+    if (inputTags.indexOf(tagName) !== -1) {
       return true
     }
   }
 
   document.onkeyup = e => {
     if (!isTyping()) {
-      switch(e.shiftKey && e.which) {
+      switch (e.shiftKey && e.which) {
         case 49:
           clickAccount(0)
           break
