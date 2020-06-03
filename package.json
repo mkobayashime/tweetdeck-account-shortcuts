@@ -1,6 +1,6 @@
 {
   "name": "switch-tweetdeck-account",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Chrome Extension for switching Twitter account used for tweet on TweetDeck by shortcut keys.",
   "private": true,
   "scripts": {
