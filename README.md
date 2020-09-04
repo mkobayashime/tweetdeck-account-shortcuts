@@ -5,7 +5,7 @@
 Chrome Extension for switching Twitter account used for tweet on TweetDeck by shortcut keys.
 Built on top of awesome [chrome-extension-cli](https://github.com/dutiyesh/chrome-extension-cli).
 
-Maintainer: [@m_kobayashi_me](https://twitter.com/m_kobayashi_me)
+Maintainer: [@mkobayashime](https://twitter.com/mkobayashime)
 
 ## Contribution
 
