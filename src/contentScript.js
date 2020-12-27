@@ -7,8 +7,8 @@ window.onload = () => {
 const getDom = () => {
   const promise = new Promise((resolve) => {
     const interval = window.setInterval(() => {
-      const showBtn = document.getElementsByClassName('js-show-drawer')[0]
-      const application = document.getElementsByClassName('application')[0]
+      const showBtn = document.getElementsByClassName("js-show-drawer")[0]
+      const application = document.getElementsByClassName("application")[0]
       if (showBtn && application) {
         window.clearInterval(interval)
         resolve({ showBtn, application })
@@ -22,17 +22,17 @@ const getDom = () => {
 }
 
 const setShortcuts = (showBtn, application) => {
-  const buttons = document.getElementsByClassName('js-account-item')
+  const buttons = document.getElementsByClassName("js-account-item")
 
   const isOpen = () => {
-    return application.classList.contains('hide-detail-view-inline')
+    return application.classList.contains("hide-detail-view-inline")
   }
 
   const clickAccount = (e) => {
     if (!isOpen()) {
       showBtn.click()
     }
-    {(e < buttons.length ? buttons[e] : buttons[0]).click()}
+    ;(e < buttons.length ? buttons[e] : buttons[0]).click()
   }
 
   const isTyping = () => {
@@ -46,7 +46,7 @@ const setShortcuts = (showBtn, application) => {
     }
   }
 
-  document.onkeydown = e => {
+  document.onkeydown = (e) => {
     if (!isTyping() && e.shiftKey && e.code.includes("Digit")) {
       e.preventDefault()
 
