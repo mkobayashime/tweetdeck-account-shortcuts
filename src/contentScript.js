@@ -48,8 +48,10 @@ const setShortcuts = (showBtn, application) => {
     }
   }
 
-  document.onkeyup = e => {
+  document.onkeydown = e => {
     if (!isTyping() && e.shiftKey && e.code.includes("Digit")) {
+      e.preventDefault()
+
       const numKeyIndex = e.code.slice(-1)
 
       numKeyIndex > 0 ? clickAccount(numKeyIndex - 1) : clickAccount(9)
