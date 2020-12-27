@@ -31,10 +31,8 @@ const setShortcuts = (showBtn, application) => {
   const clickAccount = (e) => {
     if (!isOpen()) {
       showBtn.click()
-      buttons[e].click()
-    } else {
-      buttons[e].click()
     }
+    {(e < buttons.length ? buttons[e] : buttons[0]).click()}
   }
 
   const isTyping = () => {
