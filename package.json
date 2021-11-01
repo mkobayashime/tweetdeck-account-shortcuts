@@ -7,11 +7,9 @@
     "watch": "webpack --mode=development --watch --config config/webpack.config.js",
     "build": "webpack --mode=production --config config/webpack.config.js",
     "lint": "eslint src/**/*.js",
-    "lintfix": "eslint --fix src/**/*.js",
-    "bundle": "node ./config/bundleToZip.js"
+    "lintfix": "eslint --fix src/**/*.js"
   },
   "devDependencies": {
-    "adm-zip": "0.5.2",
     "copy-webpack-plugin": "5.1.2",
     "css-loader": "3.6.0",
     "eslint": "7.19.0",
