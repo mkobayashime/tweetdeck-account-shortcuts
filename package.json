@@ -17,7 +17,7 @@
     "size-plugin": "3.0.0",
     "webpack": "4.46.0",
     "webpack-cli": "3.3.12",
-    "webpack-merge": "4.2.2"
+    "webpack-merge": "5.8.0"
   },
   "husky": {
     "hooks": {
