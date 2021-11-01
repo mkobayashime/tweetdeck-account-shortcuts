@@ -3,12 +3,6 @@
   "version": "1.4",
   "description": "Chrome Extension for switching Twitter account used for tweet on TweetDeck by shortcut keys.",
   "private": true,
-  "scripts": {
-    "watch": "webpack --mode=development --watch --config config/webpack.config.js",
-    "build": "webpack --mode=production --config config/webpack.config.js",
-    "lint": "eslint src/**/*.js",
-    "lintfix": "eslint --fix src/**/*.js"
-  },
   "devDependencies": {
     "copy-webpack-plugin": "5.1.2",
     "css-loader": "3.6.0",
