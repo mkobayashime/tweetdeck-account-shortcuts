@@ -41,7 +41,7 @@ const setShortcuts = (showBtn, application) => {
     // HTML tags to be detected as typing
     const inputTags = ["INPUT", "TEXTAREA", "SELECT"]
 
-    if (inputTags.indexOf(tagName) !== -1) {
+    if (inputTags.includes(tagName)) {
       return true
     }
   }
