@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: ["eslint:recommended", "plugin:prettier/recommended", "prettier"],
+  extends: ["eslint:recommended", "prettier"],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
@@ -20,15 +20,5 @@ module.exports = {
   rules: {
     eqeqeq: "error",
     "no-console": "warn",
-    "prettier/prettier": [
-      "error",
-      {
-        endOfLine: "lf",
-        semi: false,
-        singleQuote: false,
-        tabWidth: 2,
-        trailingComma: "es5",
-      },
-    ],
   },
-}
+};
