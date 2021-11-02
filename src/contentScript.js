@@ -1,46 +1,30 @@
 "use strict"
 
-window.onload = () => {
-  getDom()
-}
+const handleShortcut = (index) => {
+  const drawerToggleButton =
+    document.getElementsByClassName("js-show-drawer")[0]
+  const application = document.getElementsByClassName("application")[0]
+  if (!drawerToggleButton || !application) return
 
-const getDom = () => {
-  const promise = new Promise((resolve) => {
-    const interval = window.setInterval(() => {
-      const showBtn = document.getElementsByClassName("js-show-drawer")[0]
-      const application = document.getElementsByClassName("application")[0]
-      if (showBtn && application) {
-        window.clearInterval(interval)
-        resolve({ showBtn, application })
-      }
-    }, 250)
-  })
+  // if the tweet composing drawer is not opened
+  if (!application.classList.contains("hide-detail-view-inline")) {
+    drawerToggleButton.click()
+  }
 
-  promise.then((dom) => {
-    setShortcuts(dom.showBtn, dom.application)
-  })
-}
-
-const setShortcuts = (showBtn, application) => {
   const buttons = document.getElementsByClassName("js-account-item")
+  if (!buttons.length) return
 
-  const isOpen = () => {
-    return application.classList.contains("hide-detail-view-inline")
-  }
+  const buttonToClick = index < buttons.length ? buttons[index] : buttons[0]
+  buttonToClick.click()
+}
 
-  const clickAccount = (e) => {
-    if (!isOpen()) {
-      showBtn.click()
-    }
-    ;(e < buttons.length ? buttons[e] : buttons[0]).click()
-  }
-
+//
+;(() => {
   const isTyping = () => {
-    const tagName = document.activeElement.tagName
-
     // HTML tags to be detected as typing
     const inputTags = ["INPUT", "TEXTAREA", "SELECT"]
 
+    const tagName = document.activeElement.tagName
     if (inputTags.includes(tagName)) {
       return true
     }
@@ -51,8 +35,7 @@ const setShortcuts = (showBtn, application) => {
       e.preventDefault()
 
       const numKeyIndex = e.code.slice(-1)
-
-      numKeyIndex > 0 ? clickAccount(numKeyIndex - 1) : clickAccount(9)
+      numKeyIndex > 0 ? handleShortcut(numKeyIndex - 1) : handleShortcut(9)
     }
   }
-}
+})()
