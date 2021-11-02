@@ -4,7 +4,7 @@
   "description": "Add keyboard shortcuts to quickly select account to tweet from in TweetDeck",
   "private": true,
   "devDependencies": {
-    "copy-webpack-plugin": "5.1.2",
+    "copy-webpack-plugin": "9.0.1",
     "css-loader": "3.6.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "7.2.0",
