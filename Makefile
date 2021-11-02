@@ -11,7 +11,7 @@ clear:
 	rm -rf build
 
 lint:
-	yarn eslint src/**/*.js
+	yarn eslint .
 
-lintfix:
-	yarn eslint --fix src/**/*.js
+lint.fix:
+	yarn eslint --fix .
