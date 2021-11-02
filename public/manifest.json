@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Switch TweetDeck Account",
+  "name": "TweetDeck Account Shortcuts",
   "version": "1.4",
-  "description": "Chrome Extension for switching Twitter account used for tweet on TweetDeck by shortcut keys.",
+  "description": "Add keyboard shortcuts to quickly select account to tweet from in TweetDeck",
   "icons": {
     "16": "icons/icon_16.png",
     "128": "icons/icon_128.png"

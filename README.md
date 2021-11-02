@@ -1,9 +1,8 @@
-# Switch TweetDeck Account
+# TweetDeck Account Shortcuts
 
-Chrome Extension for switching Twitter account used for tweet on TweetDeck by shortcut keys.
-Built on top of awesome [chrome-extension-cli](https://github.com/dutiyesh/chrome-extension-cli).
+Add keyboard shortcuts to quickly select account to tweet from in TweetDeck.
 
-Maintainer: [@mkobayashime](https://twitter.com/mkobayashime)
+Get it via [Chrome Web Store](https://chrome.google.com/webstore/detail/switch-tweetdeck-account/jhclgjipjcengbapikaenmopdinlnpin).
 
 ## Contribution
 
