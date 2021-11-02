@@ -1,6 +1,6 @@
 {
   "name": "tweetdeck-account-shortcuts",
-  "version": "1.4",
+  "version": "2.0.0",
   "description": "Add keyboard shortcuts to quickly select account to tweet from in TweetDeck",
   "private": true,
   "devDependencies": {
