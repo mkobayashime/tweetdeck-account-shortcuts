@@ -18,18 +18,16 @@ const handleShortcut = (index) => {
   buttonToClick.click()
 }
 
+const isTyping = () => {
+  // HTML tags to be detected as typing
+  const inputTags = ["INPUT", "TEXTAREA", "SELECT"]
+
+  const tagName = document.activeElement.tagName
+  return inputTags.includes(tagName) ? true : false
+}
+
 //
 ;(() => {
-  const isTyping = () => {
-    // HTML tags to be detected as typing
-    const inputTags = ["INPUT", "TEXTAREA", "SELECT"]
-
-    const tagName = document.activeElement.tagName
-    if (inputTags.includes(tagName)) {
-      return true
-    }
-  }
-
   document.onkeydown = (e) => {
     if (!isTyping() && e.shiftKey && e.code.includes("Digit")) {
       e.preventDefault()
