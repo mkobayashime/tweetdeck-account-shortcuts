@@ -2,8 +2,11 @@
 
 const path = require("path")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
+const ZipWebpackPlugin = require("zip-webpack-plugin")
 
 const nodeEnv = process.env.NODE_ENV
+
+const version = require("./package.json").version
 
 /** @type {import('webpack').Configuration} */
 const config = {
@@ -32,6 +35,9 @@ const config = {
           context: "public",
         },
       ],
+    }),
+    new ZipWebpackPlugin({
+      filename: `${version}.zip`,
     }),
   ],
 }
