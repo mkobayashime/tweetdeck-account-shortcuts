@@ -2,10 +2,10 @@ install:
 	yarn install
 
 dev: install
-	yarn webpack --mode=development --watch
+	NODE_ENV=development yarn webpack --watch
 
 build: install clear
-	yarn webpack --mode=production
+	NODE_ENV=production yarn webpack
 
 clear:
 	rm -rf build
