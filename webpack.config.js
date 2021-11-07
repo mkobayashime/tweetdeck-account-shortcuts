@@ -3,8 +3,11 @@
 const path = require("path")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
 
+const nodeEnv = process.env.NODE_ENV
+
 /** @type {import('webpack').Configuration} */
 const config = {
+  mode: nodeEnv === "development" ? "development" : "production",
   entry: {
     contentScript: path.resolve("src", "contentScript.js"),
   },
@@ -12,7 +15,7 @@ const config = {
     path: path.resolve("build"),
     filename: "[name].js",
   },
-  devtool: "source-map",
+  devtool: nodeEnv === "development" ? "source-map" : false,
   stats: {
     all: false,
     errors: true,
