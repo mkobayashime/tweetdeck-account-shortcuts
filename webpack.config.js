@@ -2,7 +2,6 @@
 
 const path = require("path")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 /** @type {import('webpack').Configuration} */
 const config = {
@@ -20,34 +19,16 @@ const config = {
     builtAt: true,
   },
   module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              outputPath: "images",
-              name: "[name].[ext]",
-            },
-          },
-        ],
-      },
-    ],
+    rules: [],
   },
   plugins: [
-    new CopyWebpackPlugin([
-      {
-        from: "**/*",
-        context: "public",
-      },
-    ]),
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "**/*",
+          context: "public",
+        },
+      ],
     }),
   ],
 }
