@@ -36,9 +36,13 @@ const config = {
         },
       ],
     }),
-    new ZipWebpackPlugin({
-      filename: `${version}.zip`,
-    }),
+    ...(nodeEnv === "production"
+      ? [
+          new ZipWebpackPlugin({
+            filename: `${version}.zip`,
+          }),
+        ]
+      : []),
   ],
 }
 
