@@ -2,7 +2,7 @@
 
 Add keyboard shortcuts to quickly select account to tweet from in TweetDeck.
 
-Get it via [Chrome Web Store](https://chrome.google.com/webstore/detail/switch-tweetdeck-account/jhclgjipjcengbapikaenmopdinlnpin).
+Get it via [Chrome Web Store](https://chrome.google.com/webstore/detail/tweetdeck-account-shortcu/jhclgjipjcengbapikaenmopdinlnpin).
 
 ## Contribution
 
