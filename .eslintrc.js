@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
+const config = {
   env: {
     node: true,
     browser: true,
@@ -11,7 +12,7 @@ module.exports = {
     chrome: true,
   },
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 2021,
     sourceType: "module",
     ecmaFeatures: {
       jsx: true,
@@ -22,3 +23,5 @@ module.exports = {
     "no-console": "warn",
   },
 }
+
+module.exports = config
