@@ -1,6 +1,6 @@
 "use strict"
 
-const handleShortcut = (index) => {
+const selectAccount = (index) => {
   const determineButtonToClick = (buttonElements, index) =>
     index < buttonElements.length ? buttonElements[index] : buttonElements[0]
 
@@ -34,6 +34,9 @@ const handleShortcut = (index) => {
   buttonToClick?.click()
 }
 
+const quote = () =>
+  document.querySelector('button[data-action="quote"]')?.click()
+
 const isTyping = () => {
   // HTML tags to be detected as typing
   const inputTags = ["INPUT", "TEXTAREA", "SELECT"]
@@ -49,7 +52,11 @@ const isTyping = () => {
       e.preventDefault()
 
       const numKeyIndex = e.code.slice(-1)
-      numKeyIndex > 0 ? handleShortcut(numKeyIndex - 1) : handleShortcut(9)
+      numKeyIndex > 0 ? selectAccount(numKeyIndex - 1) : selectAccount(9)
+    }
+
+    if (!isTyping() && e.altKey && e.key === "Enter") {
+      quote()
     }
   }
 })()
