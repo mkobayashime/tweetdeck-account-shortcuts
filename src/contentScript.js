@@ -1,6 +1,22 @@
 "use strict"
 
 const handleShortcut = (index) => {
+  const determineButtonToClick = (buttonElements, index) =>
+    index < buttonElements.length ? buttonElements[index] : buttonElements[0]
+
+  const retweetModal = document.getElementById("actions-modal")
+  if (retweetModal?.style?.display === "block") {
+    const buttons = Array.from(
+      retweetModal.querySelectorAll(".js-account-item")
+    )
+    if (!buttons?.length) return
+
+    const buttonToClick = determineButtonToClick(buttons, index)
+    buttonToClick?.click()
+
+    return
+  }
+
   const drawerToggleButton =
     document.getElementsByClassName("js-show-drawer")[0]
   const application = document.getElementsByClassName("application")[0]
@@ -11,11 +27,11 @@ const handleShortcut = (index) => {
     drawerToggleButton.click()
   }
 
-  const buttons = document.getElementsByClassName("js-account-item")
+  const buttons = Array.from(document.getElementsByClassName("js-account-item"))
   if (!buttons.length) return
 
-  const buttonToClick = index < buttons.length ? buttons[index] : buttons[0]
-  buttonToClick.click()
+  const buttonToClick = determineButtonToClick(buttons, index)
+  buttonToClick?.click()
 }
 
 const isTyping = () => {
