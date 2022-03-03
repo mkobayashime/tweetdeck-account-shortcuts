@@ -4,6 +4,16 @@ const selectAccount = (index) => {
   const determineButtonToClick = (buttonElements, index) =>
     index < buttonElements.length ? buttonElements[index] : buttonElements[0]
 
+  const clickAccountInTheIndex = (index) => {
+    const buttons = Array.from(
+      document.getElementsByClassName("js-account-item")
+    )
+    if (!buttons.length) return
+
+    const buttonToClick = determineButtonToClick(buttons, index)
+    buttonToClick?.click()
+  }
+
   const retweetModal = document.getElementById("actions-modal")
   if (retweetModal?.style?.display === "block") {
     const buttons = Array.from(
@@ -17,6 +27,13 @@ const selectAccount = (index) => {
     return
   }
 
+  const replyPopoutButton = document.querySelector('button[title="Popout"]')
+  if (replyPopoutButton) {
+    replyPopoutButton.click()
+    clickAccountInTheIndex(index)
+    return
+  }
+
   const drawerToggleButton =
     document.getElementsByClassName("js-show-drawer")[0]
   const application = document.getElementsByClassName("application")[0]
@@ -27,11 +44,7 @@ const selectAccount = (index) => {
     drawerToggleButton.click()
   }
 
-  const buttons = Array.from(document.getElementsByClassName("js-account-item"))
-  if (!buttons.length) return
-
-  const buttonToClick = determineButtonToClick(buttons, index)
-  buttonToClick?.click()
+  clickAccountInTheIndex(index)
 }
 
 const quote = () =>
