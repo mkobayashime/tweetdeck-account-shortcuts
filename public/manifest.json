@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "TweetDeck Account Shortcuts",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Add keyboard shortcuts to quickly select account to tweet from in TweetDeck",
   "icons": {
     "16": "icons/icon_16.png",
