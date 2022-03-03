@@ -21,3 +21,6 @@ format:
 
 format.check:
 	yarn run prettier --check .
+
+version.update:
+	@./bin/version-update.sh
