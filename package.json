@@ -1,6 +1,6 @@
 {
   "name": "tweetdeck-account-shortcuts",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Add keyboard shortcuts to quickly select account to tweet/retweet from in TweetDeck",
   "private": true,
   "devDependencies": {
