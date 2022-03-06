@@ -10,6 +10,6 @@ $EDITOR $tmpfile
 
 newVersion=`head -n 1 $tmpfile`
 
-rg --ignore-file <(echo yarn.lock) -l $version | xargs sed -i "s/$version/$newVersion/g"
+sed -i "s/$version/$newVersion/g" package.json public/manifest.json
 
 rm $tmpfile
