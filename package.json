@@ -4,7 +4,7 @@
   "description": "Add keyboard shortcuts to quickly select account to tweet/retweet from in TweetDeck",
   "private": true,
   "devDependencies": {
-    "copy-webpack-plugin": "10.2.4",
+    "copy-webpack-plugin": "11.0.0",
     "eslint": "8.15.0",
     "eslint-config-prettier": "8.5.0",
     "husky": "7.0.4",
