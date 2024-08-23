@@ -1,24 +1,23 @@
 {
   "name": "tweetdeck-account-shortcuts",
-  "version": "2.3.1",
   "description": "Add keyboard shortcuts to quickly select account to tweet/retweet from in TweetDeck",
   "private": true,
+  "version": "3.0.0",
+  "type": "module",
   "devDependencies": {
-    "copy-webpack-plugin": "11.0.0",
-    "eslint": "8.31.0",
-    "eslint-config-prettier": "8.5.0",
-    "husky": "8.0.3",
-    "lint-staged": "13.1.0",
-    "prettier": "2.8.2",
-    "webpack": "5.75.0",
-    "webpack-cli": "5.0.1",
-    "zip-webpack-plugin": "4.0.1"
+    "@mkobayashime/eslint-config": "^0.3.0",
+    "@mkobayashime/eslint-config-typescript": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.2.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "wxt": "^0.19.1"
   },
   "scripts": {
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*.js": "eslint",
-    "*": "prettier --check"
+    "postinstall": "wxt prepare"
   }
 }

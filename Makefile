@@ -1,26 +1,52 @@
-install:
+wxt = yarn run wxt
+eslint = yarn eslint --ignore-path .gitignore
+prettier = yarn prettier
+
+node_modules: package.json yarn.lock
+ifeq ($(MAKE_YARN_FROZEN_LOCKFILE), 1)
+	yarn install --frozen-lockfile
+else
 	yarn install
+endif
+	@touch node_modules
 
-dev: install
-	NODE_ENV=development yarn webpack --watch
+lint: node_modules PHONY
+	$(eslint) .
 
-build: install clear
-	NODE_ENV=production yarn webpack
+lint.fix: node_modules PHONY
+	$(eslint) --fix .
 
-clear:
-	rm -rf build
+format: node_modules PHONY
+	$(prettier) --write .
 
-lint:
-	yarn eslint .
+format.check: node_modules PHONY
+	$(prettier) --check .
 
-lint.fix:
-	yarn eslint --fix .
+typecheck: node_modules PHONY
+	$(typecheck)
 
-format:
-	yarn run prettier --write .
+typecheck.watch: node_modules PHONY
+	$(typecheck) --watch
 
-format.check:
-	yarn run prettier --check .
+dev: node_modules PHONY
+	 $(wxt)
 
-version.update:
-	@./bin/version-update.sh
+dev.firefox: node_modules PHONY
+	 $(wxt) -b firefox
+
+build: node_modules PHONY
+	 $(wxt) build
+
+build.firefox: node_modules PHONY
+	 $(wxt) build -b firefox
+
+zip: node_modules PHONY
+	 $(wxt) zip
+
+zip.firefox: node_modules PHONY
+	 $(wxt) zip -b firefox
+
+compile: node_modules PHONY
+	 yarn run tsc --noEmit
+
+PHONY:
