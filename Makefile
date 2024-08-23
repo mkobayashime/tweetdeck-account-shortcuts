@@ -22,6 +22,12 @@ format: node_modules PHONY
 format.check: node_modules PHONY
 	$(prettier) --check .
 
+typecheck: node_modules PHONY
+	$(typecheck)
+
+typecheck.watch: node_modules PHONY
+	$(typecheck) --watch
+
 dev: node_modules PHONY
 	 $(wxt)
 
