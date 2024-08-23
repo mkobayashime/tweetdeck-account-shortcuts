@@ -1,4 +1,6 @@
 wxt = yarn run wxt
+eslint = yarn eslint --ignore-path .gitignore
+prettier = yarn prettier
 
 node_modules: package.json yarn.lock
 ifeq ($(MAKE_YARN_FROZEN_LOCKFILE), 1)
@@ -7,6 +9,18 @@ else
 	yarn install
 endif
 	@touch node_modules
+
+lint: node_modules PHONY
+	$(eslint) .
+
+lint.fix: node_modules PHONY
+	$(eslint) --fix .
+
+format: node_modules PHONY
+	$(prettier) --write .
+
+format.check: node_modules PHONY
+	$(prettier) --check .
 
 dev: node_modules PHONY
 	 $(wxt)
