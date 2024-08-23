@@ -1,0 +1,3 @@
+{
+  "extends": ["github>mkobayashime/renovate-config"]
+}
