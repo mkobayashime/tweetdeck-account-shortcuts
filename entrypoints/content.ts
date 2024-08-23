@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-default-export
 export default defineContentScript({
-  matches: ["https://tweetdeck.twitter.com/"],
+  matches: ["https://tweetdeck.twitter.com/", "https://x.com/i/tweetdeck*"],
   main() {
     const selectAccount = (index: number) => {
       const determineButtonToClick = (
