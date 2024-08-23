@@ -16,5 +16,8 @@
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
     "wxt": "^0.19.1"
+  },
+  "scripts": {
+    "postinstall": "wxt prepare"
   }
 }
