@@ -1,8 +1,8 @@
 {
-  "name": "wxt-starter",
-  "description": "manifest.json description",
+  "name": "tweetdeck-account-shortcuts",
+  "description": "Add keyboard shortcuts to quickly select account to tweet/retweet from in TweetDeck",
   "private": true,
-  "version": "0.0.0",
+  "version": "3.0.0",
   "type": "module",
   "devDependencies": {
     "@mkobayashime/eslint-config": "^0.3.0",
