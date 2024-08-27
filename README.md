@@ -11,8 +11,6 @@ Get it via [Chrome Web Store](https://chrome.google.com/webstore/detail/tweetdec
 
 ## Features
 
-Add keyboard shortcuts to quickly select account to tweet from in TweetDeck
-
 Add keyboard shortcuts to quickly select account to tweet/retweet from in TweetDeck.
 
 "Shift + 1", "Shift + 2", ... "Shift + 0" are for 1st, 2nd, ...10th account.
