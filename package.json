@@ -7,8 +7,8 @@
   "devDependencies": {
     "@mkobayashime/eslint-config": "0.3.0",
     "@mkobayashime/eslint-config-typescript": "1.0.0",
-    "@typescript-eslint/eslint-plugin": "8.2.0",
-    "@typescript-eslint/parser": "8.2.0",
+    "@typescript-eslint/eslint-plugin": "8.4.0",
+    "@typescript-eslint/parser": "8.4.0",
     "eslint": "8.57.0",
     "eslint-config-prettier": "8.10.0",
     "eslint-import-resolver-typescript": "3.6.1",
