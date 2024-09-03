@@ -1,4 +1,5 @@
-// eslint-disable-next-line import/no-default-export
+import { defineContentScript } from "wxt/sandbox";
+
 export default defineContentScript({
   matches: ["https://tweetdeck.twitter.com/", "https://x.com/i/tweetdeck*"],
   main() {
@@ -66,7 +67,7 @@ export default defineContentScript({
       const inputTags = ["INPUT", "TEXTAREA", "SELECT"];
 
       const tagName = document.activeElement?.tagName;
-      return inputTags.includes(tagName ?? "") ? true : false;
+      return inputTags.includes(tagName ?? "");
     };
 
     //
@@ -75,8 +76,8 @@ export default defineContentScript({
         if (!isTyping() && e.shiftKey && e.code.includes("Digit")) {
           e.preventDefault();
 
-          const numKeyIndex = parseInt(e.code.slice(-1));
-          if (isNaN(numKeyIndex)) return;
+          const numKeyIndex = Number.parseInt(e.code.slice(-1));
+          if (Number.isNaN(numKeyIndex)) return;
 
           selectAccount(numKeyIndex > 0 ? numKeyIndex - 1 : 9);
         }
