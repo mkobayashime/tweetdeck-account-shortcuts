@@ -1,7 +1,6 @@
 import { defineConfig } from "wxt";
 
 // See https://wxt.dev/api/config.html
-// eslint-disable-next-line import/no-default-export
 export default defineConfig({
   manifest: {
     name: "TweetDeck Account Shortcuts",
