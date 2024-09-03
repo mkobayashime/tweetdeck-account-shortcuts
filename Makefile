@@ -1,6 +1,5 @@
 wxt = yarn run wxt
-eslint = yarn eslint --ignore-path .gitignore
-prettier = yarn prettier
+biome = yarn run biome
 
 node_modules: package.json yarn.lock
 ifeq ($(MAKE_YARN_FROZEN_LOCKFILE), 1)
@@ -11,16 +10,10 @@ endif
 	@touch node_modules
 
 lint: node_modules PHONY
-	$(eslint) .
+	$(biome) check .
 
 lint.fix: node_modules PHONY
-	$(eslint) --fix .
-
-format: node_modules PHONY
-	$(prettier) --write .
-
-format.check: node_modules PHONY
-	$(prettier) --check .
+	$(biome) check --fix .
 
 typecheck: node_modules PHONY
 	$(typecheck)

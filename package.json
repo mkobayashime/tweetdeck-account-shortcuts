@@ -5,6 +5,7 @@
   "version": "3.0.0",
   "type": "module",
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@mkobayashime/eslint-config": "0.3.0",
     "@mkobayashime/eslint-config-typescript": "1.0.0",
     "@typescript-eslint/eslint-plugin": "8.2.0",
