@@ -5,7 +5,7 @@
   "version": "3.0.0",
   "type": "module",
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "1.9.1",
     "typescript": "5.5.4",
     "wxt": "0.19.9"
   },
