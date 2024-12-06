@@ -3594,10 +3594,10 @@ ws@8.18.0:
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.18.0.tgz#0d7505a6eafe2b0e712d232b42279f53bc289bbc"
   integrity sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==
 
-wxt@0.19.17:
-  version "0.19.17"
-  resolved "https://registry.yarnpkg.com/wxt/-/wxt-0.19.17.tgz#0de1d11e7f3143aa7bf69323bcc4eedc24a1aa4a"
-  integrity sha512-yM02qn+8F3QpJTTTDhmCUPTl6EnPwVpkCV1XFj5Ol2oUM5OIy4puwg/IdAz6QtK/3XMZzN1E8va73NtZu8WiBQ==
+wxt@0.19.19:
+  version "0.19.19"
+  resolved "https://registry.yarnpkg.com/wxt/-/wxt-0.19.19.tgz#578e2496fc4d228f8c8750066817933f818f421c"
+  integrity sha512-m/ejGRvM7ZxlvNMHfy9pO//6qCLZmIQIt55p78MaLM4wqN5DYZIcqfr5ynnR9HmISNspMFDq54eGtkAsxT4YhA==
   dependencies:
     "@aklinker1/rollup-plugin-visualizer" "5.12.0"
     "@types/chrome" "^0.0.280"
