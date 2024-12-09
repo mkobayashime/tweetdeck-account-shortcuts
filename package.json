@@ -7,7 +7,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "typescript": "5.7.2",
-    "wxt": "0.19.17"
+    "wxt": "0.19.20"
   },
   "scripts": {
     "postinstall": "wxt prepare"
