@@ -12,4 +12,5 @@ export default defineConfig({
       "128": "icon/icon_128.png",
     },
   },
+  outDirTemplate: "{{browser}}-mv{{manifestVersion}}",
 });
