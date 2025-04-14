@@ -1,45 +1,37 @@
-wxt = yarn run wxt
-biome = yarn run biome
+wxt = bunx wxt
+biome = bunx biome
 
-node_modules: package.json yarn.lock
-ifeq ($(MAKE_YARN_FROZEN_LOCKFILE), 1)
-	yarn install --frozen-lockfile
-else
-	yarn install
-endif
-	@touch node_modules
+deps: PHONY
+	bun install
 
-lint: node_modules PHONY
+lint: deps PHONY
 	$(biome) check .
 
-lint.fix: node_modules PHONY
+lint.fix: deps PHONY
 	$(biome) check --fix .
 
-typecheck: node_modules PHONY
+typecheck: deps PHONY
 	$(typecheck)
 
-typecheck.watch: node_modules PHONY
+typecheck.watch: deps PHONY
 	$(typecheck) --watch
 
-dev: node_modules PHONY
+dev: deps PHONY
 	 $(wxt)
 
-dev.firefox: node_modules PHONY
+dev.firefox: deps PHONY
 	 $(wxt) -b firefox
 
-build: node_modules PHONY
+build: deps PHONY
 	 $(wxt) build
 
-build.firefox: node_modules PHONY
+build.firefox: deps PHONY
 	 $(wxt) build -b firefox
 
-zip: node_modules PHONY
+zip: deps PHONY
 	 $(wxt) zip
 
-zip.firefox: node_modules PHONY
+zip.firefox: deps PHONY
 	 $(wxt) zip -b firefox
-
-compile: node_modules PHONY
-	 yarn run tsc --noEmit
 
 PHONY:
