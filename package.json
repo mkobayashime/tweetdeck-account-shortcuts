@@ -6,8 +6,8 @@
   "type": "module",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "typescript": "5.8.2",
-    "wxt": "0.20.1"
+    "typescript": "5.8.3",
+    "wxt": "0.20.5"
   },
   "scripts": {
     "postinstall": "wxt prepare"
